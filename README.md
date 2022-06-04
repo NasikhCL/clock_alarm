@@ -1,7 +1,7 @@
 # clock_alarm
-this is a alarm clock project where you can see the current time and also you can set multiple alarms.
+this is an alarm clock project where you can see the current time and also you can set multiple alarms.
 
-Features includes:
+Features include:
 
 Clock face:
 -Clock showing the current time and updates every second.
