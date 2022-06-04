@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- title -->
+  <title>TimeBees</title>
+  <!-- bootstrap cdn link -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!--link css file -->
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <!-- font awesme link -->
+  <script src="https://kit.fontawesome.com/a0ced3cb41.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- full main body div of the clock -->
+  <div id="clock-body">
+    <!-- naviagtion bar  -->
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <h3 class="navbar-brand">
+          <!-- logo and title/name  of the clock and alarm app-->
+          <img src="assets/clock logo img.jpg" alt="" width="30" height="24" style="border-radius: 50%;"
+            class="d-inline-block align-text-top">
+          TimeBees
+        </h3>
+        <!-- button to change the theme (dark theme and light theme) -->
+        <button id="dark-light" onclick="changeBackground()"><i id="change" class="fa-solid fa-moon"></i></i></button>
+
+      </div>
+
+    </nav>
+
+    <!-- container div for the alarm/clock  -->
+    <div id="container" class="flex-jf-c">
+      <!-- the box which contain the clock and alarm -->
+      <div id="clock-full-body" class="change-to-white">
+
+        <!-- area to display the current time -->
+        <div id="time-box" class="ml-25p">
+          <p id="clock"></p>
+        </div>
+        <!-- set alarm box -->
+        <div id="set-alarm-container">
+          <div id="set-alarm" style="margin-left: 25px;">
+            <!-- set hour of alarm -->
+            <input type="number" min="1"  max="12" name="set-hours" id="set-hours"
+              placeholder="HH" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
+              <!-- set minutes of the alarm -->
+            <input type="number" min="0" max="59" name="set-minutes" id="set-minutes"  placeholder="MM"
+              onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
+              <!-- set seconds of the alarm -->
+            <input type="number" min="0" max="59" name="set-seconds" id="set-seconds" class="alarm-input" placeholder="SS"
+              onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
+            <!-- to select/set AM/PM -->
+            <select name="am-pm" id="am-pm" style="width: 50px; height:35px;">
+              <option data-value="AM">AM</option>
+              <option data-value="PM">PM</option>
+            </select>
+            <!-- button to add the alarm to the list -->
+            <button type="submit" id="add-btn">Set Alarm</button>
+          </div>
+
+        </div>
+        <!-- display the alarm once its added  -->
+        <div id="alarm-history" style="margin-top: 10px; margin-left: 30px;">
+          <h2><u> Alarms</u></h2>
+          <ul id="alarm-list"></ul>
+        </div>
+
+      <!-- the box which contain the clock and alarm closed -->
+      </div>
+
+    <!-- container div for the alarm/clock closed  -->
+    </div>
+ 
+  <!-- full main body div of the clock closed-->
+  </div>
+
+  
+
+  
+  
+  <!-- link javascript file  -->
+  <script src="index.js"></script>
+</body>
+
+</html>

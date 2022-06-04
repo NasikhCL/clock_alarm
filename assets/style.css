@@ -1,0 +1,145 @@
+/* body tag of the html  */
+body{
+    margin: 0;
+    background: url(pexels-janko-ferlic-590493.jpg);
+    background-size: cover;
+}
+
+/* navigation bar */
+nav{
+    position: static;
+}
+
+
+    
+/* the box which contain the clock and alarms */
+#clock-full-body{
+    width: 450px;
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px 2px rgb(99, 99, 99);
+}
+
+
+
+/* the current time displaying clock */
+
+#clock{
+    
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    width: 200px;
+    text-align: center;
+    
+
+}
+
+/* box of set hours,minutes,seconds for the alarm*/ 
+
+#set-alarm-container{
+    border: 2px solid brown;
+    margin-left: 25px;
+    width: 400px;
+    height: 65px
+}
+
+/* the input box to set the alarm */
+#set-alarm-container input,select{
+    background-color: #f8f9d2;
+    background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+    border: 1px solid black;
+
+    width: 55px;
+    height: 35px;
+    margin-top: 15px;
+}
+
+/* set alarm button */
+
+#add-btn{
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: bold;
+    margin-left:20px;
+    color: #537895;
+}
+/* set alarm button n hover
+ */
+#add-btn:hover{
+
+    background-color: white;
+    color: rgb(13, 65, 11);
+    font-weight: bold;
+   
+
+}
+
+
+/* the added alarm ul list */
+
+#alarm-list {
+    height: 270px;
+    width: 330px;
+    overflow-y: scroll;
+    list-style: square;
+  
+}
+
+/* list item*/
+
+#alarm-list li{
+
+    
+    margin-top: 10px;
+    font-size: 25px;
+    
+}
+
+/* to hide the scrollbar if lot of alarms added */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* delete button of the added alarms */
+.delete-btn{
+    float: right;
+    background-color: transparent;
+    border:none;
+    
+}
+/* delete button of the added alarms when hover on it*/
+.delete-btn:hover{
+    color: red;
+}
+
+/* change the theme to dark and light  */
+
+.change-to-black{
+    color: aliceblue;
+    background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+    transition: all 1s ease-in-out;
+}
+.change-to-white{
+    
+    background-color: #fbfbfb;
+background-image: linear-gradient(315deg, #fbfbfb 0%, #f9886c 74%);
+    transition: all 1s ease-in-out;
+}
+
+
+/* margin left 25% */
+
+.ml-25p{
+    margin-left:25%;
+}
+
+/* display flex and justify-content center */
+
+.flex-jf-c{
+    display: flex;
+    justify-content: center;
+}
